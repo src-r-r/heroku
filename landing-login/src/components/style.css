@@ -1,0 +1,238 @@
+.LandingPage {
+	background-image: url('https://media-cdn.tripadvisor.com/media/photo-s/03/9b/2f/fc/pattaya.jpg');
+	background-position: 50%;
+	background-size: cover;
+	height: 100vh;
+	text-align: center;
+	position: relative;
+}
+.LandingPage h1 {
+	/*font-family: Sweet Sensations Personal Use;*/
+	/*font-family: "Pacifico", cursive;*/
+	color: white;
+}
+.Navbar-wrapper {
+	background: rgba(255, 255, 255, 0.1);
+	height: 60px;
+	position: relative;
+	/*box-shadow: 1px 2px 3px 4px grey;*/
+}
+.logo {
+	position: absolute;
+	top: 10px;
+	left: 20px;
+	width: 25px;
+	height: auto;
+	cursor: pointer;
+}
+.nav-active-btn {
+	float: right;
+	background-color: #1ab188;
+	width: 100px;
+	border-radius: 5px;
+	text-align: center;
+	margin-right: 20px;
+	margin-top: 10px;
+	color: white;
+}
+.nav-btn {
+	float: right;
+	background-color: transparent;
+	width: 100px;
+	border-radius: 5px;
+	text-align: center;
+	margin-right: 20px;
+	margin-top: 10px;
+	color: white;
+}
+.nav-btn:hover, {
+	background-color: rgba(52, 53, 53, 0.65);
+	color: white;
+}
+.nav-active-btn:focus {
+	outline: none;
+}
+.nav-btn:focus {
+	outline: none;
+}
+.MainBody {
+	animation-name: ZoomOut;
+	animation-duration: 1s;
+	width: 33%;
+	height: auto;
+	background: rgba(13, 13, 13, 0.65);
+	margin: auto;
+	margin-top: 65px;
+	color: white;
+	padding: 25px;
+	border-radius: 5px;
+	box-shadow: 0px 3px 58px 1px rgb(0, 0, 0);
+	-webkit-box-shadow: 0px 3px 58px 1px rgb(0, 0, 0);
+	/*overflow-y: auto;
+	max-height: calc(100% - 150px);*/
+}
+.MainBody input {
+	padding: 5px 10px;
+	border: 1px solid #708183;
+	background-color: transparent;
+	color: #ffffff;
+}
+.MainBody input:hover {
+	background: rgba(255, 255, 255, 0.1);
+}
+.MainBody input:focus {
+	background-color: rgba(87, 102, 103, 0.59);
+}
+.MainBody input::placeholder {
+	color: white;
+}
+.place-star {
+	display: inline-block;
+	color: #1ab188;
+	transform: rotate(20deg);
+}
+.sign-form {
+	position: relative;
+}
+.FullName {
+	position: absolute;
+	left: 85px;
+	top: 5px;
+}
+.Phone {
+	position: absolute;
+	left: 121px;
+	top: 66px;
+}
+.Country {
+	position: absolute;
+	left: 106px;
+	top: 127px;
+}
+.City {
+	position: absolute;
+	left: 77px;
+	bottom: 84px;
+}
+.MainBody h1 {
+	/*font-family: Sweet Sensations Personal Use;*/
+	font-size: 25px;
+	text-align: center;
+	margin: 30px 0;
+}
+.active-btn {
+	cursor: pointer;
+	width: 50%;
+	padding: 10px;
+	text-align: center;
+	background-color: #1ab188;
+	color: white;
+}
+.inactive-btn {
+	cursor: pointer;
+	width: 50%;
+	padding: 10px;
+	text-align: center;
+	background-color: grey;
+	color: #93a6a5;
+}
+.twice-input input {
+	width: 48%;
+	margin-right: 4%;
+}
+.twice-input> :last-child {
+	margin-right: 0;
+}
+.common-input {
+	width: 100%;
+	margin-top: 25px;
+}
+.common-btn {
+	padding: 5px 10px;
+	font-size: 25px;
+	font-weight: 300;
+	width: 100%;
+	margin-top: 30px;
+	background-color: #1ab188;
+	border: none;
+	color: white;
+	/*font-family: "Pacifico", cursive;*/
+}
+.started-btn:focus {
+	outline: none;
+}
+.slide-left-part {
+	margin: auto;
+}
+.AlertBox {
+	position: absolute;
+	top: 18%;
+	right: 30px;
+	border-radius: 5px;
+	background: #eb5a46;
+	color: #fbedeb;
+	font-size: 16px;
+	padding: 5px 10px;
+}
+.top-title {
+	position: absolute;
+	top: 9%;
+	left: 6%;
+	font-size: 30px;
+	animation-name: StepOne;
+	animation-duration: 1.5s;
+}
+.left-title {
+	position: absolute;
+	top: 50%;
+	font-size: 25px;
+	left: 6%;
+	animation-name: StepTwo;
+	animation-duration: 1.8s;
+}
+.right-title {
+	position: absolute;
+	bottom: 12%;
+	right: 6%;
+	font-size: 25px;
+	animation-name: StepThree;
+	animation-duration: 1.8s;
+}
+.top-title-down {
+	position: absolute;
+	top: 14%;
+	right: 6%;
+	font-size: 30px;
+	animation-name: StepFour;
+	animation-duration: 1.5s;
+}
+
+
+
+/*------------Keyframes---------------*/
+
+@keyframes ZoomOut {
+	0% {transform: scale(0.5);}
+	50% {transform: scale(1.1);}
+	100% {transform: scale(1);}
+}
+
+@keyframes StepOne {
+	0% {left: -50%;}
+	100% {left: 6%;}
+}
+
+@keyframes StepTwo {
+	0% {left: -50%;}
+	100% {left: 6%;}
+}
+
+@keyframes StepThree {
+	0% {right: -50%;}
+	100% {right: 6%;}
+}
+
+@keyframes StepFour {
+	0% {right: -50%;}
+	100% {right: 6%;}
+}
