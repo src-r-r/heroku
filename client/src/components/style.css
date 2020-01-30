@@ -1,5 +1,5 @@
 .LandingPage {
-	background-image: url('https://media-cdn.tripadvisor.com/media/photo-s/03/9b/2f/fc/pattaya.jpg');
+	background-image: url('/static/media/pattaya.jpg');
 	background-position: 50%;
 	background-size: cover;
 	height: 100vh;
