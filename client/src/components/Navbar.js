@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 
 // Import css and components for this
 import logo from '../imgs/logo.png';
+import background from '../imgs/pattaya.jpg';
 import LinkBtn from './global-components/linkBtn';
 
 
