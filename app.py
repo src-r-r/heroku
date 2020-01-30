@@ -3,8 +3,8 @@ from flask import Flask,jsonify, render_template
 from flask_restful import Api
 from flask_jwt_extended import JWTManager
 
-from model import dbt
-import resources
+from tt.model import dbt
+from tt import resources
 
 #app = Flask(__name__, static_url_path='/build')
 app = Flask(__name__.split('.')[0], static_folder='client/build/static', template_folder="client/build")
