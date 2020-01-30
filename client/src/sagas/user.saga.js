@@ -11,7 +11,7 @@ export function* doSignUpUser(action) {
 		console.log(action.payload);
 		// singup backend
 		//const responsebody = yield call(api.signup, signUpData);
-		let url = "https://srcrrherokuangular.herokuapp.com";
+		let url = "https://srcrrherokuangular.herokuapp.com/register";
 		let formData  = new FormData();
 	    let data = signUpData;
 	    for(let name in data) {
