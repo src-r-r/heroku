@@ -15,10 +15,10 @@ jwt=JWTManager(app)
 
 @app.route('/')
 def index():
-    return "sss"
+    return "render_template('index.html')"
 
-# api.add_resource(resources.UserRegistration, '/register')
-# api.add_resource(resources.UserLogin, '/login')
+api.add_resource(resources.UserRegistration, '/register')
+api.add_resource(resources.UserLogin, '/login')
 
 if __name__ == "__main__":
     app.debug = True
