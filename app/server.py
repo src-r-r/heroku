@@ -1,4 +1,4 @@
-from flask import Flask,jsonify
+from flask import Flask,jsonify, render_template
 
 from flask_restful import Api
 from flask_jwt_extended import JWTManager
@@ -6,7 +6,8 @@ from flask_jwt_extended import JWTManager
 from model import dbt
 import resources
 
-app = Flask(__name__)
+#app = Flask(__name__, static_url_path='/build')
+app = Flask(__name__.split('.')[0], static_folder='../client/build/static', template_folder="../client/build")
 api = Api(app)
 
 app.config['JWT_SECRET_KEY'] = 'boost-is-the-secret-of-our-app'
@@ -14,7 +15,7 @@ jwt=JWTManager(app)
 
 @app.route('/')
 def index():
-    return jsonify({"message" : "hello, this is server :)"})
+    return render_template('index.html')
 
 api.add_resource(resources.UserRegistration, '/register')
 api.add_resource(resources.UserLogin, '/login')
