@@ -3,7 +3,7 @@ from flask import Flask,jsonify
 from flask_restful import Api
 from flask_jwt_extended import JWTManager
 
-from model import User,db
+from model import dbt
 import resources
 
 app = Flask(__name__)

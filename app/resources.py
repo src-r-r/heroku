@@ -4,7 +4,7 @@ from flask_restful import Resource, reqparse
 from flask_jwt_extended import (create_access_token, create_refresh_token, jwt_required, jwt_refresh_token_required,
                                 get_jwt_identity, get_raw_jwt)
 import hashlib
-from model import User, db
+from model import dbt
 
 parser = reqparse.RequestParser()
 parser.add_argument('username')
@@ -21,9 +21,9 @@ class UserRegistration(Resource):
             # if User.query.filter(User.username==data['username']).first():
             #     return {"error" : "User already exists"}
 
-            u = User(username=data['username'], phone=data['phone'],city=data['city'],country=data['country'])
-            u.save()
-
+            # u = User(username=data['username'], phone=data['phone'],city=data['city'],country=data['country'])
+            # u.save()
+            user = dbt.db.users.save({"username": data['username'],"phone": data['phone'],"country": data['country'],"city": data['city']});
             # access_token = create_access_token(identity=data['username'])
             # refresh_token = create_refresh_token(identity=data['username'])
             # return {
