@@ -15,7 +15,7 @@ jwt=JWTManager(app)
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    return "sss"
 
 # api.add_resource(resources.UserRegistration, '/register')
 # api.add_resource(resources.UserLogin, '/login')
