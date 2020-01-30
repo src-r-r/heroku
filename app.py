@@ -22,4 +22,4 @@ api.add_resource(resources.UserLogin, '/login')
 
 if __name__ == "__main__":
     app.debug = True
-    app.run()
+    app.run(threaded=True, port=5000)
