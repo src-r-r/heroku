@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { noDropDownFlag, falseFlag } from '../actions';
 import { bindActionCreators } from 'redux';
 
+
 // Import css and component for this
 import SignUpArea from './SignUpArea';
 import LogInArea from './LogInArea';
@@ -16,8 +17,8 @@ class MainBody extends Component {
 		this.onSignUp = this.onSignUp.bind(this);
 
 		this.state = {
-			visible: false,
-			title: ''
+			visible: true,
+			title: 'signup'
 		}
 	}
 
@@ -121,7 +122,6 @@ class MainBody extends Component {
 					:
 						<div className="hidden"></div>
 				}
-					
 			</>
 		);
 	}

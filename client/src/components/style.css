@@ -1,5 +1,5 @@
 .LandingPage {
-	background-image: url('/static/media/pattaya.jpg');
+	background-image: url('../imgs/bk.jpg');
 	background-position: 50%;
 	background-size: cover;
 	height: 100vh;
@@ -7,8 +7,7 @@
 	position: relative;
 }
 .LandingPage h1 {
-	/*font-family: Sweet Sensations Personal Use;*/
-	/*font-family: "Pacifico", cursive;*/
+	font-weight: 700;
 	color: white;
 }
 .Navbar-wrapper {
@@ -19,9 +18,9 @@
 }
 .logo {
 	position: absolute;
-	top: 10px;
+	top: 2px;
 	left: 20px;
-	width: 25px;
+	width: 30px;
 	height: auto;
 	cursor: pointer;
 }
@@ -62,7 +61,7 @@
 	height: auto;
 	background: rgba(13, 13, 13, 0.65);
 	margin: auto;
-	margin-top: 65px;
+	margin-top: 70px;
 	color: white;
 	padding: 25px;
 	border-radius: 5px;
@@ -156,7 +155,17 @@
 	background-color: #1ab188;
 	border: none;
 	color: white;
+	box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+	transition: color 0.15s ease-in-out,background-color 0.15s ease-in-out,border-color 0.15s ease-in-out,box-shadow 0.15s ease-in-out,-webkit-box-shadow 0.15s ease-in-out;
 	/*font-family: "Pacifico", cursive;*/
+}
+.common-btn:hover {
+	box-shadow: 0 5px 11px 0 rgba(0,0,0,0.18),0 4px 15px 0 rgba(0,0,0,0.15);
+	color: #212121;
+}
+.common-btn:focus {
+	outline: none;
+	color: white;
 }
 .started-btn:focus {
 	outline: none;
@@ -166,17 +175,20 @@
 }
 .AlertBox {
 	position: absolute;
-	top: 18%;
+	top: 21%;
 	right: 30px;
-	border-radius: 5px;
+	border-radius: 2px;
 	background: #eb5a46;
 	color: #fbedeb;
 	font-size: 16px;
 	padding: 5px 10px;
+	animation-name: Opacity;
+	animation-duration: .5s;
+	opacity: 1;
 }
 .top-title {
 	position: absolute;
-	top: 9%;
+	top: 10%;
 	left: 6%;
 	font-size: 30px;
 	animation-name: StepOne;
@@ -192,7 +204,7 @@
 }
 .right-title {
 	position: absolute;
-	bottom: 12%;
+	top: 50%;
 	right: 6%;
 	font-size: 25px;
 	animation-name: StepThree;
@@ -200,13 +212,26 @@
 }
 .top-title-down {
 	position: absolute;
-	top: 14%;
+	top: 15%;
 	right: 6%;
 	font-size: 30px;
 	animation-name: StepFour;
 	animation-duration: 1.5s;
 }
-
+.success-modal {
+	margin-top: 15% !important;
+}
+.success-modal> :first-child {
+	width: 100% !important;
+	background: transparent !important;
+	width: max-content;
+	box-shadow: none !important;
+	text-align: center;
+}
+.success-modal span {
+	font-size: 30px;
+	font-weight: 700;
+}
 
 
 /*------------Keyframes---------------*/
@@ -235,4 +260,9 @@
 @keyframes StepFour {
 	0% {right: -50%;}
 	100% {right: 6%;}
+}
+
+@keyframes Opacity {
+	0% {opacity: 0;}
+	100% {opacity: 1;}
 }

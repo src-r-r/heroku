@@ -22,7 +22,8 @@ class LinkBtn extends Component {
 
 	componentWillMount() {
 		this.setState({
-			linkKey: this.props.linkKey
+			linkKey: this.props.linkKey,
+			clicked: this.props.clicked
 		});
 	}
 
