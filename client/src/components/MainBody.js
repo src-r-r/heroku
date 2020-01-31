@@ -108,7 +108,7 @@ class MainBody extends Component {
 							</div>
 							{
 								(this.state.title === 'login') ?
-									<h1>Log In for free</h1>
+									<h1>Log In</h1>
 								:
 									<h1>Sign Up for free</h1>
 							}

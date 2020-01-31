@@ -1,7 +1,6 @@
 import { takeLatest, call, put, all, takeEvery } from 'redux-saga/effects';
 import * as types from '../constants';
 import * as api from '../connectivily/api.user';
-// import validateName from '../validation/validateName';
 import * as userAction from "../actions";
 
 
@@ -9,8 +8,6 @@ export function* doSignUpUser(action) {
 	try {
 		const signUpData = action.payload;
 		console.log(action.payload);
-		// singup backend
-		//const responsebody = yield call(api.signup, signUpData);
 		let url = "https://srcrrherokuangular.herokuapp.com/register";
 		let formData  = new FormData();
 	    let data = signUpData;
@@ -22,19 +19,9 @@ export function* doSignUpUser(action) {
 	      body: formData
 	    }).then( res => res.json())
 	    .then(data=>{
-	      //sss
 	      localStorage.setItem('username', 'username');
-
-	      // if (localStorage.getItem("access_token") !== null && localStorage.getItem("access_token")!=="undefined") {
-	      //   window.location.replace("/")
-	      // }else{
-	      //     alert(data.error)
-	      // }
 	    }).catch(err => console.log(err));
 
-		// if (responsebody.data == "Add success!") {
-		// 	action.payload.history.push('/checkTrelloPage')
-		// }
 
 	} catch (err) {
 		yield put(userAction.errors());

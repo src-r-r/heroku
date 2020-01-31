@@ -17,20 +17,7 @@ class UserRegistration(Resource):
         #try:
             data = parser.parse_args()
             print(data)
-            # print(hashlib.md5(data['password'].encode()).hexdigest())
-            # if User.query.filter(User.username==data['username']).first():
-            #     return {"error" : "User already exists"}
-
-            # u = User(username=data['username'], phone=data['phone'],city=data['city'],country=data['country'])
-            # u.save()
-            user = dbt.db.users.save({"username": data['username'],"phone": data['phone'],"country": data['country'],"city": data['city']});
-            # access_token = create_access_token(identity=data['username'])
-            # refresh_token = create_refresh_token(identity=data['username'])
-            # return {
-            #     'username': data['username'],
-            #     'access_token': access_token,
-            #     'refresh_token': refresh_token
-            # }
+            user = dbt.db.users.save({"username": data['username'],"phone": data['phone'],"country": data['country'],"city": data['city']})
         #except:
          #   raise Exception()
 

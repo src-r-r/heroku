@@ -29,7 +29,6 @@ dictConfig(
 
 app = Flask(__name__)
 
-# app = Flask(__name__, static_url_path='/build')
 app = Flask(
     __name__.split(".")[0],
     static_folder="client/build/static",
